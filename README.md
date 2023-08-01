@@ -1,2 +1,2 @@
-# viktor-careers-website
-A careers website for Viktor
+# viktor-portifolio-website
+A portifolio website for Viktor
