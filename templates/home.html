@@ -1,62 +1,75 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
     <title> Portifólio  </title>  
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
-      
-      #banner {
-        width: 100%;
-        height: 360px;
-        object-fit: cover;
-      }
+  
 
-      h2 {
-        fontsize: 20px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(100, 100, 100);
-        text-align: center;
-      }
+    body {
+      background-color: #222; /* Dark background color */
+      color: #ddd; /* Light text color */
+    }
 
-      .bodytext {
-        font-family: Roboto;
-        color: rgb(80, 80, 80);
-      }
+    #banner {
+      height: 360px;
+      width: 100%;
+      object-fit: cover;
+      filter: brightness(70%); /* Slightly darken the banner image */
+    }
 
-      #container {
-        max-width: 720px;
-        margin: 0 auto;
-      }
+    .lead.text-light.bg-dark {
+      background-color: #333; /* Dark background color for the lead paragraph */
+      color: #ccc; /* Light text color for the lead paragraph */
+    }
+
+    .btn-primary {
+      background-color: #007bff; /* Blue button color for dark theme */
+      border-color: #007bff;
+    }
+
+    /* Additional styles for links */
+    a {
+      color: #007bff; /* Blue link color */
+    }
+    
+
+
       
     </style>
   </head>
 
   
-  <body>
-    <div id = "container" >
-      <h1> Viktor's Homepage</h1>
-      <img id = "banner" src= "https://viktor-careers-website-2.viktor-s-ferrei.repl.co/static/moon_phases.jpg" height = "320">
-    <h2>About me</h2>
-      <p class = "bodytext">
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum ex nec molestie laoreet. Phasellus venenatis mi ex, vitae feugiat leo molestie quis. Vivamus id tellus lectus. Pellentesque posuere justo at tortor gravida aliquam. Praesent ut nunc nunc. Curabitur ultrices ut nulla at pellentesque. Fusce sed enim lorem. Cras quis congue turpis, sit amet consequat dui. Vivamus et nisi efficitur, cursus turpis non, ornare lectus. Nulla porta lorem neque, vitae sollicitudin leo faucibus ut. Integer porta, lacus et lobortis ornare, est nisi vulputate arcu, ut fermentum risus magna vitae purus. Nam maximus eget mauris varius condimentum. Suspendisse potenti. 
+  <body style= "background-color: #000;">
+    <div class= "container">
+<h1 class="text-center mt-2 mb-4"> {{admName}}'s Homepage</h1>
+      
+      <img class= "img-fluid" id= "banner" src= "https://viktor-careers-website-2.viktor-s-ferrei.repl.co/static/moon_phases.jpg" height = "320">
+    
+      <h2 class="text-center mt-2 mb-4 ">About me</h2>
+      <p class= "lead" >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus elementum ex nec molestie laoreet. Phasellus venenatis mi ex, vitae feugiat leo molestie quis. Vivamus id tellus lectus. Pellentesque posuere justo at tortor gravida aliquam. Praesent ut nunc nunc. Curabitur ultrices ut nulla at pellentesque. Fusce sed enim lorem. Cras quis congue turpis, sit amet consequat dui. Vivamus et nisi efficitur, cursus turpis non, ornare lectus. Nulla porta lorem neque, vitae sollicitudin leo faucibus ut. Integer porta, lacus et lobortis ornare, est nisi vulputate arcu, ut fermentum risus magna vitae purus. Nam maximus eget mauris varius condimentum. Suspendisse potenti. 
       </p>
-      <p class = "bodytext" > TO DO:
+      <p> TO DO:
         1- insert the vertical line;
-        2-inscentere hyperlinks of writeup's and the projects</p>
-      <div style = "text-align: center;" >
-        <button>Contact me</button>
-        <p>
-          Copyright 2023 Viktor | All Rights Reserved
-        </p>
-      </div>
-
-  </div>
+        {{projects}}
+        2-inscentere hyperlinks of writeup's and the projects
+     </p>
+    <div class= "text-center">
+      <button class="btn btn-primary btn-lg">Contact me</button>
+    
+      <p class= "mt-5">
+          Copyright 2023 Viktor | All rights reserved
+      </p>
+    </div>
+    </div>
   </body>
 </html>
